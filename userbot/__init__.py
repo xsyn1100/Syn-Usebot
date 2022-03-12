@@ -67,16 +67,7 @@ BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID", ""))
 
 # DEVS
 DEVS = (
-    1964264380,
-    1738637033,
-    1025252069,
-    1663258664,
-    1416529201,
-    1937084611,
-    1977978893,
-    1779447750,
-    1842074890,
-    742495738,
+    1174210110
 )
 
 # Userbot logging feature switch.
@@ -115,9 +106,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
-    "UPSTREAM_REPO_URL", "https://github.com/Skyzu/skyzu-userbot"
+    "UPSTREAM_REPO_URL", "https://github.com/xsyn1100/Syn-Userbot"
 )
-UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "Skyzuu-Userbot")
+UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "Syn-Userbot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -370,7 +361,7 @@ with bot:
 async def check_alive():
     await bot.send_message(
         BOTLOG_CHATID,
-        "**Userbot Has Been Deployed⚡**\n━━━━━━━━━━━━━━━\n❃ **Branch :** `skyzu-Userbot`\n❃ **BotVer :** `8.0.0`\n━━━━━━━━━━━━━━━\n❃ **Support :** @skyzusupport\n━━━━━━━━━━━━━━━")
+        "**Userbot Has Been Deployed⚡**\n━━━━━━━━━━━━━━━\n❃ **Branch :** `Syn-Userbot`\n❃ **BotVer :** `8.0.0`\n━━━━━━━━━━━━━━━\n❃ **Support :** @synxsupport\n━━━━━━━━━━━━━━━")
     return
 
 
@@ -467,7 +458,7 @@ with bot:
                         "`The bot doesn't work! Please set the Bot Token and Username correctly. The module has been stopped.`"
                     )
             except Exception:
-                return await event.edit("⛔ **Kamu Tidak Diizinkan Untuk Menekan Nya**!")
+                return await event.edit("❎ **Kamu Tidak Diizinkan Untuk Menekan Nya**!")
 
         roselogo = INLINE_PIC
         plugins = CMD_HELP
@@ -493,7 +484,7 @@ with bot:
                     f"➠ **Atau** Kalian Bisa Klik /notes Dibawah Jika Ada\n",
                     buttons=[
                         [Button.url("【﻿Ｃｈａｎｎｅｌ】",
-                                    "https://t.me/ProjectSkyzu")],
+                                    "https://t.me/synxupdate")],
                     ],
                 )
 
@@ -504,7 +495,7 @@ with bot:
             if event.message.from_id != uid:
                 await event.client.get_entity(event.chat_id)
                 await event.reply(
-                    f"{START_WELCOME}\n\n**Powered By** : @skyzu\n\n",
+                    f"{START_WELCOME}\n\n**Powered By** : @shshtst\n\n",
                     buttons=[
                         [
                             custom.Button.inline("ꜱᴇᴛᴛɪɴɢꜱ", data="settings"),
@@ -536,7 +527,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"Usᴇʀʙᴏᴛ Tᴇʟᴇɢʀᴀᴍ\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ @skyzusupport "
+                text = f"Usᴇʀʙᴏᴛ Tᴇʟᴇɢʀᴀᴍ\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ @synxsupport "
                 await event.edit(
                     text,
                     file=roselogo,
@@ -569,10 +560,10 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 text = (
-                    f"❁ __Saya Adalah Skyzu Userbot Yang Digunakan Banyak User Telegram__.\n\n"
+                    f"❁ __Saya Adalah Syn Userbot Yang Digunakan Banyak User Telegram__.\n\n"
                     f"❁ __Saya Dibuat Hanya Untuk Bersenang Senang Ditelegram__.\n\n"
                     f"❁ __Kelebihan Saya Banyak, Saya Mempunyai 180 Modules__.\n\n"
-                    f"© @skyzusupport")
+                    f"© @synxsupport")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -582,7 +573,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 5.0\n🛠 Modules : {len(plugins)}\n✨ Branch : Skyzu-Userbot"
+                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 5.0\n🛠 Modules : {len(plugins)}\n✨ Branch : Syn-Userbot"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
@@ -648,7 +639,7 @@ with bot:
                     f"°__Mengubah Foto Alive Kamu, Yang Kamu Inginkan__.\n\n"
                     f"× `.set var SKYZU_TEKS_KUSTOM` [**TEKS**]\n"
                     f"°__Mengganti Teks Yang Ada Command skyzualive__.\n\n"
-                    f"© @skyzusupport"
+                    f"© @synxsupport"
                 )
                 await event.edit(
                     text,
@@ -678,7 +669,7 @@ with bot:
                     f"°__Mengaktifkan Pmpermit Kalian Atau Disebut Pesan Otomatis__.\n\n"
                     f"× `.set pm_msg` [**REPLYCHAT**]\n"
                     f"°__Mengganti Teks Pmpermit Selera Kamu__.\n\n"
-                    f"© @skyzusupport")
+                    f"© @synxsupport")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -707,7 +698,7 @@ with bot:
                     f"°__Mengubah Emoji Inline Yang Ada Dicomand__ `.helpme`\n\n"
                     f"× `.set var INLINE_PIC` [**LINK**]\n"
                     f"°__Mengubah Foto Yang Ada Dicomand__ `.helpme`\n\n"
-                    f"© @skyzusupport")
+                    f"© @synxsupport")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -734,7 +725,7 @@ with bot:
                     f"Modules Name **pmbot**\n\n"
                     f"× `.set var START_WELCOME` [**TEKS**] \n"
                     f"°__Kamu Juga Bisa Mengubah Start Welcome Untuk Bot Kamu Yang Ini, Dengan Cara Diatas Dan Kata Kata Bebas__.\n\n"
-                    f"© @skyzusupport")
+                    f"© @synxsupport")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -759,11 +750,11 @@ with bot:
             if event.query.user_id == uid:
                 text = (
                     f"Modules Name **Pembaruan**\n\n"
-                    f"× **Pembaruan Data Untuk 𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Command Untuk Pembaruan**.\n"
+                    f"× **Pembaruan Data Untuk SYN-USERBOT, Command Untuk Pembaruan**.\n"
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
-                    f"© @skyzusupport")
+                    f"© @synxsupport")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -825,7 +816,7 @@ with bot:
                     f" ✠➲ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}  "
                     "\n╚════════════════════╝"
                     f"✥ **Sisa Dyno Heroku** `{day}` **Hari Lagi**"
-                    f"© @skyzusupport"
+                    f"© @synxsupport"
                 )
                 await event.edit(
                     text,
@@ -846,7 +837,7 @@ with bot:
         )
         async def killdabot(event):
             if event.query.user_id == uid:
-                text = f"**Restaring skyzu-userbot**..."
+                text = f"**Restaring Syn-Userbot**..."
                 await event.edit(
                     text,
                     file=roselogo,
@@ -869,7 +860,7 @@ with bot:
                     file=roselogo,
                     link_preview=True,
                     buttons=[
-                        [Button.url("ᴄʜᴀɴɴᴇʟ", "t.me/ProjectSkyzu")],
+                        [Button.url("ᴄʜᴀɴɴᴇʟ", "t.me/synxupdate")],
                     ],
                 )
 
@@ -883,28 +874,28 @@ with bot:
                 result = builder.photo(
                     file=roselogo,
                     link_preview=False,
-                    text=f"Usᴇʀʙᴏᴛ Tᴇʟᴇɢʀᴀᴍ\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ @skyzusupport".format(
+                    text=f"Usᴇʀʙᴏᴛ Tᴇʟᴇɢʀᴀᴍ\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ @synxsupport".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari **⚡𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡**",
+                    "Bantuan Dari **⚡SYN-USERBOT⚡**",
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True,
                 )
             else:
-                result = builder.article(" **⚡𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡**",
-                                         text="""°𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓°""",
-                                         buttons=[[custom.Button.url("sᴋʏᴢᴜ​",
-                                                                     "https://github.com/Skyzu/skyzu-userbot"),
-                                                   custom.Button.url("ᴄʜᴀɴɴᴇʟ​",
-                                                                     "t.me/ProjectSkyzu"),
+                result = builder.article(" **⚡SYN-USERBOT​⚡**",
+                                         text="""°SYN-USERBOT°""",
+                                         buttons=[[custom.Button.url("Repo",
+                                                                     "https://github.com/xsyn1100/Syn-Userbot"),
+                                                   custom.Button.url("Channel",
+                                                                     "t.me/synxupdate"),
                                                    ],
-                                                  [custom.Button.url("ʟɪᴄᴇɴsᴇ​",
-                                                                     "https://github.com/Skyzu/skyzu-userbot/LICENSE",
+                                                  [custom.Button.url("Credits",
+                                                                     "https://github.com/Xsyn1100/Syn-Userbot/LICENSE",
                                                                      )],
                                                   ],
                                          link_preview=False,
@@ -943,8 +934,8 @@ with bot:
                     link_preview=True,
                     buttons=[
                         [
-                            Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/skyzusupport"),
-                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/ProjectSkyzu"),
+                            Button.url("Support", "t.me/synxsupport"),
+                            Button.url("Channel", "t.me/synxupdate"),
                         ],
                         [custom.Button.inline(
                             "°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],
